@@ -5,10 +5,10 @@ Once you have written your FunLang scripts (like the examples in the tutorial), 
 ## Prerequisites
 Ensure you have successfully compiled the FunLang interpreter. If you haven't done this yet, open your terminal in the project folder and compile it using GCC:
 
-**Mac/Linux/Windows (Git Bash/PowerShell):**
-` ` `bash
+**Mac / Linux / Windows (Git Bash or PowerShell):**
+```bash
 gcc -std=c11 -Wall -Wextra -O2 src/*.c -o funlang -lm
-` ` `
+```
 
 This command generates an executable file named `funlang` (or `funlang.exe` on Windows).
 
@@ -17,10 +17,10 @@ This command generates an executable file named `funlang` (or `funlang.exe` on W
 ## Step 1: Save Your Script
 Write your FunLang code and save it in a plain text file with a `.fun` extension. For example, create a file named `my_script.fun` and add your code:
 
-` ` `fun
+```fun
 // my_script.fun
 println(string("Running my first FunLang script!"))
-` ` `
+```
 
 ## Step 2: Open Your Terminal
 Open your command prompt, PowerShell, or terminal and navigate to the folder where your `funlang` executable is located.
@@ -29,14 +29,14 @@ Open your command prompt, PowerShell, or terminal and navigate to the folder whe
 Run the interpreter from the command line, passing the path to your `.fun` script as an argument.
 
 ### On Linux or macOS:
-` ` `bash
+```bash
 ./funlang my_script.fun
-` ` `
+```
 
 ### On Windows (Command Prompt or PowerShell):
-` ` `powershell
+```powershell
 .\funlang.exe my_script.fun
-` ` `
+```
 
 *(Note: If your script is inside a folder, for example `examples/`, you would run `./funlang examples/my_script.fun` or `.\funlang.exe examples\my_script.fun`)*
 
