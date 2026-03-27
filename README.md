@@ -15,7 +15,7 @@ Let's dive in!
 
 To print to the screen, we use the `print()` and `println()` (print with newline) functions. Since everything is a function call, even raw text must be wrapped in the `string()` function.
 
-
+` ` `
 // This is a comment!
 println(string("Hello, World!"))
 print(string("Welcome to "))
@@ -30,7 +30,7 @@ To declare or use a variable, wrap its name in the `var()` function. FunLang sup
 
 *Note: In FunLang, integers and decimals are both just `number()`.*
 
-
+` ` `
 var(name) = string("Alice")
 var(age) = number(25)
 var(pi) = number(3.14159)
@@ -49,7 +49,7 @@ Since there are no operators like `+` or `-`, you use math functions. You can ne
 
 Available functions: `add`, `sub`, `mul`, `div`, `mod`, `pow`.
 
-
+` ` `
 var(a) = number(10)
 var(b) = number(3)
 
@@ -72,7 +72,7 @@ Just like math, comparisons and boolean logic are handled via functions.
 * **Comparisons:** `eq` (==), `neq` (!=), `gt` (>), `lt` (<), `gte` (>=), `lte` (<=)
 * **Logic:** `and`, `or`, `not`
 
-
+` ` `
 var(x) = number(10)
 
 // Check if x is greater than 5 AND less than 20
@@ -95,7 +95,7 @@ FunLang uses the `iff()` function for if-statements. It takes three arguments:
 
 *The `do()` block is a special function that executes multiple statements in order.*
 
-
+` ` `
 var(age) = number(18)
 
 iff(
@@ -119,7 +119,7 @@ FunLang supports two types of loops: `loop_while()` and `loop_for()`.
 ### The While Loop
 Runs as long as the condition is true.
 
-
+` ` `
 var(counter) = number(0)
 
 loop_while(
@@ -136,7 +136,7 @@ loop_while(
 ### The For Loop
 Takes a variable, a start number (inclusive), an end number (exclusive), and a `do()` block.
 
-
+` ` `
 println(string("Counting to 5:"))
 
 loop_for(var(i), number(1), number(6), do(
@@ -150,7 +150,7 @@ loop_for(var(i), number(1), number(6), do(
 
 You can group values together using `list()`.
 
-
+` ` `
 // Create a list
 var(fruits) = list(string("apple"), string("banana"))
 
@@ -176,7 +176,7 @@ In FunLang, you don't just "define" and "call" functions—you **cook** them and
 * `serve(name, arg1, arg2)` executes the function.
 * `give_back(value)` returns a value from the function.
 
-
+` ` `
 // 1. Cook the function
 cook(multiply_by_two, args(x), do(
     var(result) = mul(var(x), number(2)),
@@ -196,7 +196,7 @@ println(var(ans)) // Prints 42
 
 Things go wrong. When they do, you want to catch the error instead of crashing your program. Use `attempt()` and `rescue()`. You can also throw your own custom errors using `explode()`.
 
-
+` ` `
 attempt(
     do(
         // This will trigger a MathError!
@@ -220,7 +220,7 @@ attempt(
 FunLang can read from and write to text files seamlessly. 
 Modes available: `"r"` (read), `"w"` (write), `"a"` (append).
 
-
+` ` `
 // Write to a file
 var(fw) = file_open(string("secret.txt"), string("w"))
 file_write(var(fw), string("FunLang is awesome!"))
