@@ -17,7 +17,7 @@ This command generates an executable file named `funlang` (or `funlang.exe` on W
 ## Step 1: Save Your Script
 Write your FunLang code and save it in a plain text file with a `.fun` extension. For example, create a file named `my_script.fun` and add your code:
 
-` ` `fun
+
 // my_script.fun
 println(string("Running my first FunLang script!"))
 ` ` `
